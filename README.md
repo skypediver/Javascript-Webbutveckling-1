@@ -1,2 +1,2 @@
 # Javascript-Webbutveckling-1
-javascript
+javascript snippets for web courses
