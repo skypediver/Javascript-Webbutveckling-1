@@ -1,5 +1,6 @@
 /**
  * Created by PK53084 on 2016-06-09.
+ * functions for fade in and fade out
  */
 
 var dest;
