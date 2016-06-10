@@ -1,0 +1,47 @@
+/**
+ * Created by pk53084 on 2016-04-29.
+ */
+
+
+var file ="news.txt";
+var ax_object ;
+
+/*
+if(navigator.appName.search('Microsoft')>-1) { ax_object = new ActiveXObject('MSXML2.XMLHTTP'); }
+else { ax_object = new XMLHttpRequest(); }
+
+*/
+
+window.onload= function(){
+
+    read_file();
+
+
+}
+
+
+
+function read_file() {
+    var text = new XMLHttpRequest();
+    text.open("GET", "news.txt", true);
+    text.onreadystatechange = function() {
+        // Check states 4 = ready, 200 = file exsists
+        if(text.readyState === 4 && text.status === 200) {
+
+            document.getElementById("display").innerHTML=text.responseText;
+        }
+    }
+    text.send(null);
+
+
+}
+
+/*
+
+function open_file() {
+    ax_object.open('get', 'news.txt', true);
+    ax_object.onreadystatechange= read_file;
+    ax_object.send(null);
+}
+*/
+
